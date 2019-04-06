@@ -45,9 +45,9 @@ namespace iPass
                 HtmlNode label = element;
                 HtmlNode value = element.NextSibling.NextSibling;
 
-                if (!data.ContainsKey(WebUtility.HtmlDecode(label.InnerText).Trim(':', ' ')) && value != null && !string.IsNullOrEmpty(label.InnerText) && !string.IsNullOrEmpty(value.InnerText))
+                if (!data.ContainsKey(WebUtility.HtmlDecode(label.InnerText.Trim(':', ' ')).Trim()) && value != null && !string.IsNullOrEmpty(label.InnerText) && !string.IsNullOrEmpty(value.InnerText))
                 {
-                    data.Add(WebUtility.HtmlDecode(label.InnerText).Trim(':', ' '), WebUtility.HtmlDecode(value.InnerText.Trim()));
+                    data.Add(WebUtility.HtmlDecode(label.InnerText.Trim(':', ' ')).Trim(), WebUtility.HtmlDecode(value.InnerText.Trim()));
                 }
                 
             }

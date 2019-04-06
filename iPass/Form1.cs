@@ -46,7 +46,7 @@ namespace iPass
             Dictionary<String, String> bio = ipass.getBio();
 
             foreach(var entry in bio){
-                richTextBox1.Text += entry.Key.Trim() + entry.Value.Trim() + "\n";
+                richTextBox1.Text += entry.Key + entry.Value + "\n";
             }
         }
     }
