@@ -1,0 +1,7 @@
+name://*[@id='General Information']/tr[2]/td/table/tr[1]/td[2]
+photo://*[@id=\"kidphoto\"]
+email://*[@id=\"General Information\"]/tr[2]/td/table/tr[4]/td[2]
+dob://*[@id=\"General Information\"]/tr[2]/td/table/tr[3]/td[2]
+age://*[@id=\"General Information\"]/tr[2]/td/table/tr[3]/td[3]
+locker://*[@id=\"General Information\"]/tr[2]/td/table/tr[5]/td[2]
+ethnicity://*[@id=\"General Information\"]/tr[2]/td/table/tr[4]/td[4]
