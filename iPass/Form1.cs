@@ -9,9 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using HtmlAgilityPack;
-using System.Web;
-using System.Configuration;
-
 
 namespace iPass
 {
