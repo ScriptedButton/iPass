@@ -53,6 +53,8 @@ namespace iPass
             ipass.loadBio();
             ipass.loadSchedule();
             webBrowser1.DocumentText = ipass.getSchedule().Replace("window.top.location.replace('/school/nsboro/syslogin.html')", "");
+            webBrowser2.Url = new Uri("https://ipassweb.harrisschool.solutions/school/nsboro/samgrades.html");
+            webBrowser2.DocumentText = ipass.getGrades().Replace("window.top.location.replace('/school/nsboro/syslogin.html')", "");
             ipass.loadXpaths(Environment.CurrentDirectory + @"/xpaths.txt");
 
             string[][] phoneNumbers = ipass.getPhoneNumbers();
@@ -152,6 +154,19 @@ namespace iPass
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+                if (webBrowser2.Document != null)
+                {
+                webBrowser2.Document.GetElementById("academicYear").OuterHtml = "";
+                    foreach (HtmlElement imgElemt in webBrowser2.Document.Images)
+                    {
+                        imgElemt.SetAttribute("src", "");
+                        imgElemt.SetAttribute("alt", "");
+                    }
+                }
         }
     }
 }

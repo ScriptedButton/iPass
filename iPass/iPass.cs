@@ -70,6 +70,11 @@ namespace iPass
             return wc.DownloadString("https://ipassweb.harrisschool.solutions/school/nsboro/" + schedule.SelectSingleNode("//*[@name=\"stuschedule\"]//a[1]").Attributes["href"].Value.Replace("javascript:openSched2('", "").Replace("')", ""));
         }
 
+        public String getGrades()
+        {
+            return wc.DownloadString("https://ipassweb.harrisschool.solutions/school/nsboro/samgrades.html");
+        }
+
         private String getXpath(String key)
         {
             return xpathValues[key];
